@@ -1,5 +1,5 @@
 {% set name = "seqlog" %}
-{% set version = "0.3.20" %}
+{% set version = "0.3.24" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 441e091d6d56f1f6a8df883bd30b7ecb510b061df4901dc11f0f051bd3ecea8a
+  sha256: 29626712ef56ab0833620f92be2aac65ebb5378a977e0c07d9615b28eab140dc
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
